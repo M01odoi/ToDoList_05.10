@@ -6,6 +6,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
 <div class="container">
@@ -14,9 +15,35 @@
             ToDo List
         </h1>
     </div>
-    <button type="button" class="btn btn-primary btn-lg m-b-30" data-toggle="modal" data-target="#modalAddTask">Launch
-        modal
-    </button>
+    <div class="text-right">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalAddTask">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;Add task
+        </button>
+    </div>
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#todo" data-toggle="tab">To Do</a></li>
+        <li><a href="#inprogress" data-toggle="tab">In progress</a></li>
+        <li><a href="#done" data-toggle="tab">Done</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="todo">
+            <ul class="list-group">
+                <li class="list-group-item" data-status="1"></li>
+            </ul>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="inprogress">
+            <ul class="list-group" data-status="2">
+            </ul>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="done">
+            <ul class="list-group" data-status="3">
+            </ul>
+        </div>
+    </div>
 
 
 </div>
