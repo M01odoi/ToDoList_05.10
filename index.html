@@ -19,6 +19,9 @@
         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalAddTask">
             <span class="glyphicon glyphicon-plus"></span>&nbsp;Add task
         </button>
+        <button type="button" class="btn btn-danger btn-lg" data-toggle="removeAll">
+            <span class="glyphicon glyphicon-trash"></span>&nbsp;Remove
+        </button>
     </div>
 
     <ul class="nav nav-tabs" role="tablist">
@@ -29,8 +32,7 @@
 
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="todo">
-            <ul class="list-group">
-                <li class="list-group-item" data-status="1"></li>
+            <ul class="list-group" data-status="1">
             </ul>
         </div>
 
@@ -45,6 +47,24 @@
         </div>
     </div>
 
+    <div class="col-sm-4">
+        <div class="panel panel-danger">
+            <div class="panel-heading">Should be done</div>
+            <div class="panel-body">Tasks count <span class="badge firstSpan"></span></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel panel-warning">
+            <div class="panel-heading">Will be done soon</div>
+            <div class="panel-body">Tasks count <span class="badge secondSpan"></span></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel panel-success">
+            <div class="panel-heading">Already done</div>
+            <div class="panel-body">Tasks count <span class="badge thirdSpan"></span></div>
+        </div>
+    </div>
 
 </div>
 <!-- Modal -->
